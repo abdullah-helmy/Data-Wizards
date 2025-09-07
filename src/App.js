@@ -1,18 +1,30 @@
 import logo from './logo.svg';
 import './index.css';
 import Navbar from './Navbar';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Home from './Home';
+import Login from './Login';
+import About from './About';
 
 function App() {
   const [isDark, setIsDark] = useState(false);
-  const [Signed, setSigned] = useState(false);
+  const [signedIn, setSignedIn] = useState(false);
+  const [activePage, setActivePage] = useState('home');
 
   const darkModeHandler = () => setIsDark(!isDark);
 
+  useEffect(() => {
+    document.body.className = isDark ? 'bg-black text-white' : 'bg-white text-black';
+  }, [isDark]);
+
   return (
-    <div className={isDark ? 'bg-[#000000] text-white' : ''}>
-      <Navbar handler={darkModeHandler} />
-    </div>
+    <>
+      <Navbar setActivePage={setActivePage} darkModeHandler={darkModeHandler} />
+
+      {activePage === 'home' ? <Home /> : null}
+      {activePage === 'login' ? <Login /> : null}
+      {activePage === 'about' ? <About /> : null}
+    </>
   );
 }
 
