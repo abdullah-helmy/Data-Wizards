@@ -62,7 +62,7 @@ const Login = (props) => {
                         <button
                             ref={button}
                             type="submit"
-                            className={`h-8 w-[300px] m-auto my-5 border border-2 border-solid border-black rounded-md ${
+                            className={`h-10 w-[300px] m-auto my-5 border border-2 border-solid border-black rounded-md ${
                                 props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'
                             }`}
                         >
@@ -119,7 +119,7 @@ const Login = (props) => {
                         <button
                             ref={button}
                             type="submit" 
-                            className={`h-8 w-[300px] m-auto my-5 py-2 border border-2 border-solid border-black rounded-md ${
+                            className={`h-10 w-[300px] m-auto my-5 p-auto border border-2 border-solid border-black rounded-md ${
                                 props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'
                             }`}
                         >
