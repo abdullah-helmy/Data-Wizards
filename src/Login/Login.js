@@ -42,19 +42,19 @@ const Login = (props) => {
                 <>
                     <form
                         ref={form}
-                        className="flex flex-col shadow-lg justify-center content-center border border-2 rounded-lg p-5"
+                        className="flex flex-col shadow-lg justify-center content-center border-2 rounded-lg p-5"
                     >
                         <label>Username</label>
                         <input
                             type="text"
-                            className={`h-8 border border-2 border-solid border-black rounded-md ${
+                            className={`h-8 border border-solid border-black rounded-md ${
                                 props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'
                             }`}
                         />
                         <label>Password</label>
                         <input
                             type="password"
-                            className={`h-8 border border-2 border-solid border-black rounded-md ${
+                            className={`h-8  border-2 border-solid border-black rounded-md ${
                                 props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'
                             }`}
                         />
@@ -62,7 +62,7 @@ const Login = (props) => {
                         <button
                             ref={button}
                             type="submit"
-                            className={`h-10 w-[300px] m-auto my-5 border border-2 border-solid border-black rounded-md ${
+                            className={`h-10 w-[300px] m-auto my-5 border-2 border-solid border-black rounded-md ${
                                 props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'
                             }`}
                         >
@@ -70,7 +70,7 @@ const Login = (props) => {
                         </button>
 
                         <p>
-                            If you don't have an account, <button className="text-blue-400" onClick={changeSignIn}>Create an account</button>
+                            If you have an account, <button className="text-blue-400" onClick={changeSignIn}>Login in your account</button>
                         </p>
                     </form>
                 </>
@@ -78,40 +78,40 @@ const Login = (props) => {
                 <>
                     <form
                         ref={form} 
-                        className="flex flex-col shadow-lg justify-center content-center border border-2 rounded-lg p-5"
+                        className="flex flex-col shadow-lg justify-center content-center border-2 rounded-lg p-5"
                     >
                         <label>Username</label>
                         <input
                             type="text"
-                            className={`h-8 border border-2 border-solid border-black rounded-md ${
+                            className={`h-8 border-2 border-solid border-black rounded-md ${
                                 props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'
                             }`}
                         />
                         <label>Email</label>
                         <input
                             type="email"
-                            className={`h-8 border border-2 border-solid border-black rounded-md ${
+                            className={`h-8 border-2 border-solid border-black rounded-md ${
                                 props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'
                             }`}
                         />
                         <label>Phone Number</label>
                         <input
                             type="tel" 
-                            className={`h-8 border border-2 border-solid border-black rounded-md ${
+                            className={`h-8 border-2 border-solid border-black rounded-md ${
                                 props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'
                             }`}
                         />
                         <label>Password</label>
                         <input
                             type="password" 
-                            className={`h-8 border border-2 border-solid border-black rounded-md ${
+                            className={`h-8 border-2 border-solid border-black rounded-md ${
                                 props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'
                             }`}
                         />
                         <label>Confirm Password</label>
                         <input
                             type="password"
-                            className={`h-8 border border-2 border-solid border-black rounded-md ${
+                            className={`h-8 border-2 border-solid border-black rounded-md ${
                                 props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'
                             }`}
                         />
@@ -119,7 +119,7 @@ const Login = (props) => {
                         <button
                             ref={button}
                             type="submit" 
-                            className={`h-10 w-[300px] m-auto my-5 p-auto border border-2 border-solid border-black rounded-md ${
+                            className={`h-10 w-[300px] m-auto my-5 p-auto border-2 border-solid border-black rounded-md ${
                                 props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'
                             }`}
                         >
