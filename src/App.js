@@ -1,9 +1,9 @@
 import './index.css';
-import Navbar from './Navbar';
+import Navbar from './Components/Navbar';
 import { useEffect, useState } from 'react';
-import Home from './Home';
-import Login from './Login';
-import About from './About';
+import Home from './Home/Home';
+import Login from './Login/Login';
+import About from './About/About';
 
 function App() {
   const [isDark, setIsDark] = useState(true);
