@@ -43,14 +43,12 @@ const Login = (props) => {
                             <label>Username</label>
                             <input
                                 type="text"
-                                className={`h-8 border border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'
-                                    }`}
+                                className={`h-8 border border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'}`}
                             />
                             <label>Password</label>
                             <input
                                 type="password"
-                                className={`h-8  border-2 border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'
-                                    }`}
+                                className={`h-8  border-2 border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'}`}
                             />
 
                             <button
@@ -77,32 +75,27 @@ const Login = (props) => {
                             <label>Username</label>
                             <input
                                 type="text"
-                                className={`h-8 border-2 border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'
-                                    }`}
+                                className={`h-8 border-2 border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'}`}
                             />
                             <label>Email</label>
                             <input
                                 type="email"
-                                className={`h-8 border-2 border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'
-                                    }`}
+                                className={`h-8 border-2 border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'}`}
                             />
                             <label>Phone Number</label>
                             <input
                                 type="tel"
-                                className={`h-8 border-2 border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'
-                                    }`}
+                                className={`h-8 border-2 border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'}`}
                             />
                             <label>Password</label>
                             <input
                                 type="password"
-                                className={`h-8 border-2 border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'
-                                    }`}
+                                className={`h-8 border-2 border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'}`}
                             />
                             <label>Confirm Password</label>
                             <input
                                 type="password"
-                                className={`h-8 border-2 border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'
-                                    }`}
+                                className={`h-8 border-2 border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'}`}
                             />
 
                             <button
