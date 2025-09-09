@@ -14,7 +14,7 @@ const Footer = (props) => {
     }, [props.isDark]);
 
     return (
-        <div ref={footer} className="border-t-2 my-[500px] grid grid-cols-3 gap-2">
+        <div ref={footer} className="border-t-2 grid grid-cols-3 gap-2">
             <div>
                 <p className='font-bold'>Documentation</p>
             </div>

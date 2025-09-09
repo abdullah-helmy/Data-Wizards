@@ -11,7 +11,7 @@ function App() {
   const [activePage, setActivePage] = useState('home');
 
   useEffect(() => {
-    document.body.className = isDark ? 'bg-black text-white' : 'bg-white text-black';
+    document.body.className = isDark ? 'bg-black  text-white' : 'bg-white text-black';
   }, [isDark]);
 
   const darkModeHandler = () => setIsDark(prev => !prev);
@@ -26,7 +26,7 @@ function App() {
 
       {activePage === 'home' ? <Home isDark={isDark} /> : null}
       {activePage === 'login' ? <Login isDark={isDark} /> : null}
-      {activePage === 'about' ? <About /> : null}
+      {activePage === 'about' ? <About isDark={isDark} /> : null}
 
       {activePage === 'login' ? '' : <Footer isDark={isDark} />}
     </>
