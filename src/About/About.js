@@ -1,5 +1,11 @@
-import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquareLinkedin } from "@fortawesome/free-brands-svg-icons";
+import IMAGE2 from '../Images/IMAGE2.jpg'
+import IMAGE3 from '../Images/IMAGE3.jpg';
+import IMAGE4 from '../Images/IMAGE4.jpg';
+import IMAGE6 from '../Images/IMAGE6.jpg'
 
 const About = (props) => {
     const div = useRef(null);
@@ -15,11 +21,11 @@ const About = (props) => {
     }, [props.isDark])
 
     return (
-        <div ref={div} className="m-16 p-5 border-2 rounded-lg">
+        <div ref={div} className="my-16 mx-[300px] p-5 border-2 rounded-lg">
             <motion.div
-                initial={{opacity: 0, y: 50}} 
-                animate={{opacity: 1, y: 0}} 
-                transition={{duration: 2, ease: "easeOut"}}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 2, ease: "easeOut" }}
                 className="text-lg pb-5"
             >
                 <p className="text-3xl font-bold">About us</p>
@@ -27,9 +33,9 @@ const About = (props) => {
             </motion.div>
 
             <motion.div
-                initial={{opacity: 0, y: 50}} 
-                animate={{opacity: 1, y: 0}} 
-                transition={{duration: 2, ease: "easeOut", delay: 0.5}}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 2, ease: "easeOut", delay: 0.5 }}
                 className="text-lg pb-5"
             >
                 <p className="text-3xl font-bold">Our insight</p>
@@ -37,9 +43,9 @@ const About = (props) => {
             </motion.div>
 
             <motion.div
-                initial={{opacity: 0, y: 50}} 
-                animate={{opacity: 1, y: 0}} 
-                transition={{duration: 2, ease: "easeOut", delay: 1}}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 2, ease: "easeOut", delay: 1 }}
                 className="text-lg pb-5"
             >
                 <p className="text-3xl font-bold">Who are we?</p>
@@ -47,81 +53,106 @@ const About = (props) => {
             </motion.div>
 
             <motion.div
-                initial={{opacity: 0, y: 50}} 
-                animate={{opacity: 1, y: 0}} 
-                transition={{duration: 2, ease: "easeOut", delay: 1.5}}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 2, ease: "easeOut", delay: 1.5 }}
                 className="text-lg pb-5"
             >
                 <p className="text-3xl font-bold">Our aim</p>
-                Through this project, we hope to achieve global sustainability goals to create a day when everyone can breathe.
+                Through this project, we hope to achieve global sustainability goals to achieve a day when everyone can breathe.
             </motion.div>
 
-            <p className="text-3xl font-bold">Our team</p>
+            <motion.p
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 2, ease: "easeOut", delay: 1 }}
+                className="text-3xl font-bold"
+            >
+                Our team
+            </motion.p>
 
-            <div className="grid grid-cols-2 gap-2 pt-2">
+            <div className="grid grid-cols-3 gap-6 pt-2">
                 <motion.div
-                    initial={{opacity: 0, y: 50}} 
-                    animate={{opacity: 1, y: 0}} 
-                    transition={{duration: 2, ease: "easeOut", delay: 1}}
-                    className="border border-gray-600 rounded-lg bg-gray-800"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 2, ease: "easeOut", delay: 1 }}
+                    className="flex flex-col justify-center border border-gray-600 rounded-lg bg-slate-900 p-14"
                 >
-                    <img />
-                    <p className="text-xl">Abdullah M. Helmy</p>
-                    <p>Researcher & front-end developer</p>
+                    <img className="rounded-[100%] h-[200px] w-[200px] mx-auto" src={IMAGE6} alt="Something went wrong" />
+                    <p className="text-xl mx-auto">Abdullah M. Helmy</p>
+                    <p className="mx-auto">Researcher & front-end developer</p>
+                    <a className="mx-auto text-blue-500 text-4xl" href="">
+                        <FontAwesomeIcon icon={faSquareLinkedin} />
+                    </a>
                 </motion.div>
 
                 <motion.div
-                    initial={{opacity: 0, y: 50}} 
-                    animate={{opacity: 1, y: 0}} 
-                    transition={{duration: 2, ease: "easeOut", delay: 1}}
-                    className="border border-gray-600 rounded-lg bg-gray-800"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 2, ease: "easeOut", delay: 1 }}
+                    className="flex flex-col justify-center border border-gray-600 rounded-lg bg-slate-900 p-14"
                 >
                     <img />
-                    <p className="text-xl">Aya Mohammed</p>
-                    <p>Researcher</p>
+                    <p className="text-xl mx-auto">Aya Mohammed</p>
+                    <p className="mx-auto">Researcher</p>
+                    <a className="mx-auto text-blue-500 text-4xl" href="">
+                        <FontAwesomeIcon icon={faSquareLinkedin} />
+                    </a>
                 </motion.div>
 
                 <motion.div
-                    initial={{opacity: 0, y: 50}} 
-                    animate={{opacity: 1, y: 0}} 
-                    transition={{duration: 2, ease: "easeOut", delay: 1}}
-                    className="border border-gray-600 rounded-lg bg-gray-800"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 2, ease: "easeOut", delay: 1 }}
+                    className="flex flex-col justify-center border border-gray-600 rounded-lg bg-slate-900 p-14"
                 >
-                    <img />
-                    <p className="text-xl">Habiba</p>
-                    <p>Researcher</p>
+                    <img className="rounded-[100%] h-[200px] w-[200px] mx-auto" src={IMAGE3} alt="Something went wrong" />
+                    <p className="text-xl mx-auto">Habiba</p>
+                    <p className="mx-auto">Researcher</p>
+                    <a className="mx-auto text-blue-500 text-4xl" href="">
+                        <FontAwesomeIcon icon={faSquareLinkedin} />
+                    </a>
                 </motion.div>
 
                 <motion.div
-                    initial={{opacity: 0, y: 50}} 
-                    animate={{opacity: 1, y: 0}} 
-                    transition={{duration: 2, ease: "easeOut", delay: 1}}
-                    className="border border-gray-600 rounded-lg bg-gray-800"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 2, ease: "easeOut", delay: 1 }}
+                    className="flex flex-col justify-center border border-gray-600 rounded-lg bg-slate-900 p-14"
                 >
-                    <img />
-                    <p className="text-xl">Asaad Zein</p>
-                    <p>Front-end developer, AI & data analysis</p>
+                    <img className="rounded-[100%] h-[200px] w-[200px] mx-auto" src={IMAGE4} alt="Something went wrong" />
+                    <p className="text-xl mx-auto">Asaad Zein</p>
+                    <p className="mx-auto">Front-end developer, AI & data analysis</p>
+                    <a className="mx-auto text-blue-500 text-4xl" href="">
+                        <FontAwesomeIcon icon={faSquareLinkedin} />
+                    </a>
                 </motion.div>
 
                 <motion.div
-                    initial={{opacity: 0, y: 50}} 
-                    animate={{opacity: 1, y: 0}} 
-                    transition={{duration: 2, ease: "easeOut", delay: 1}}
-                    className="border border-gray-600 rounded-lg bg-gray-800"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 2, ease: "easeOut", delay: 1 }}
+                    className="flex flex-col justify-center border border-gray-600 rounded-lg bg-slate-900 p-14"
                 >
                     <img />
-                    <p className="text-xl">Alya Elwan</p>
+                    <p className="text-xl mx-auto">Alya Elwan</p>
+                    <a className="mx-auto text-blue-500 text-4xl" href="">
+                        <FontAwesomeIcon icon={faSquareLinkedin} />
+                    </a>
                 </motion.div>
 
                 <motion.div
-                    initial={{opacity: 0, y: 50}} 
-                    animate={{opacity: 1, y: 0}} 
-                    transition={{duration: 2, ease: "easeOut", delay: 1}}
-                    className="border border-gray-600 rounded-lg bg-gray-800"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 2, ease: "easeOut", delay: 1 }}
+                    className="flex flex-col justify-center border border-gray-600 rounded-lg bg-slate-900 p-14"
                 >
-                    <img />
-                    <p className="text-xl">Hager Gomaa</p>
-                    <p>Front-end developer</p>
+                    <img className="rounded-[100%] h-[200px] w-[200px] mx-auto" src={IMAGE2} alt="Something went wrong" />
+                    <p className="text-xl mx-auto">Hager Gomaa</p>
+                    <p className="mx-auto">Front-end developer</p>
+                    <a className="mx-auto text-blue-500 text-4xl" href="">
+                        <FontAwesomeIcon icon={faSquareLinkedin} />
+                    </a>
                 </motion.div>
             </div>
         </div>
