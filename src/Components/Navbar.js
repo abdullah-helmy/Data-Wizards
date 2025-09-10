@@ -18,22 +18,22 @@ const Navbar = (props) => {
     return (
         <div className="border-b-2" ref={navbar}>
             <ul className='flex flex-row py-5 px-2'>
-                <li className='pr-5'>
+                <li className='pr-3'>
                     <button className='' onClick={() => props.setActivePage('home')}>Home</button>
                 </li>
-                <li className='pr-5'>
+                <li className='pr-3'>
                     <button className='' onClick={() => props.setActivePage('forecast')}>Forecast</button>
                 </li>
-                <li className='pr-5'>
+                <li className='pr-3'>
                     <button className='' onClick={() => props.setActivePage('docs')}>Documentation</button>
                 </li>
-                <li className='pr-5'>
+                <li className='pr-3'>
                     <button className='' onClick={() => props.setActivePage('login')}>Login</button>
                 </li>
-                <li className='pr-5'>
+                <li>
                     <button className='' onClick={() => props.setActivePage('about')}>About</button>
                 </li>
-                <button className="absolute right-0 pr-5" onClick={() => props.darkModeHandler()}>
+                <button className="absolute ml-44 right-0 pr-5" onClick={() => props.darkModeHandler()}>
                     <FontAwesomeIcon icon={faSun} />
                 </button>
             </ul>

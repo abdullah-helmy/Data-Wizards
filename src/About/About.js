@@ -115,7 +115,6 @@ const About = (props) => {
                     transition={{ duration: 2, ease: "easeOut", delay: 2 }}
                     className="flex flex-col justify-center border rounded-lg p-14 cards"
                 >
-                    <img />
                     <p className="text-xl mx-auto">Aya Mohammed</p>
                     <p className="mx-auto">Researcher</p>
                     <a className="mx-auto text-blue-500 text-4xl" href="https://www.linkedin.com/in/aya-mohamed-87a069371?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
@@ -178,7 +177,7 @@ const About = (props) => {
                     <img className="rounded-[100%] h-[200px] w-[200px] mx-auto" src={IMAGE2} alt="Something went wrong" />
                     <p className="text-xl mx-auto">Hager Gomaa</p>
                     <p className="mx-auto">Front-end developer</p>
-                    <a className="mx-auto text-blue-500 text-4xl" href="">
+                    <a className="mx-auto text-blue-500 text-4xl" href="/">
                         <FontAwesomeIcon icon={faSquareLinkedin} />
                     </a>
                 </motion.div>
