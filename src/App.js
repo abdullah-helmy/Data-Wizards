@@ -5,6 +5,8 @@ import Home from './Home/Home';
 import Login from './Login/Login';
 import About from './About/About';
 import Footer from './Components/Footer';
+import Forecast from './Forecast/Forecast';
+import Documentation from './Documentation/Documentation';
 
 function App() {
   const [isDark, setIsDark] = useState(true);
@@ -25,10 +27,12 @@ function App() {
       />
 
       {activePage === 'home' ? <Home isDark={isDark} /> : null}
+      {activePage === 'forecast' ? <Forecast isDark={isDark} /> : null}
+      {activePage === 'docs' ? <Documentation isDark={isDark} /> : null}
       {activePage === 'login' ? <Login isDark={isDark} /> : null}
       {activePage === 'about' ? <About isDark={isDark} /> : null}
 
-      {activePage === 'login' ? '' : <Footer isDark={isDark} />}
+      {activePage === 'login' ? '' : <Footer isDark={isDark} setActivePage={setActivePage} />}
     </>
   );
 }

@@ -5,29 +5,55 @@ const Footer = (props) => {
 
     useEffect(() => {
         if (props.isDark) {
-            footer.current.classList.add('border-gray-600');
-            footer.current.classList.remove('border-gray-100');
+            footer.current.classList.add('border-gray-600', 'bg-slate-800');
+            footer.current.classList.remove('border-slate-200', 'bg-slate-100');
         } else {
-            footer.current.classList.remove('border-gray-600');
-            footer.current.classList.add('border-gray-100');
+            footer.current.classList.remove('border-gray-600', 'bg-slate-800');
+            footer.current.classList.add('border-slate-200', 'bg-slate-100');
         }
     }, [props.isDark]);
 
     return (
-        <div ref={footer} className="border-t-2 bg-slate-900 grid grid-cols-3 gap-2 p-5">
+        <div ref={footer} className="border-t-2 grid grid-cols-3 gap-2 p-5">
             <div>
                 <p className='font-bold'>Documentation</p>
             </div>
             <div>
                 <p className='font-bold'>About Us</p>
-                <a href="#1" className='block'>Who are we?</a>
-                <a href="#1" className='block'>Our insight</a>
-                <a href="#1" className='block'>Our Team</a>
+                <button className="block" onClick={() => {
+                    props.setActivePage('about');
+                    setTimeout(() => {
+                        const who = document.getElementById('who');
+                        who.scrollIntoView({ behavior: 'smooth' });
+                    }, 500);
+                }}>Who are we?</button>
+
+                <button className="block" onClick={() => {
+                    props.setActivePage('about');
+                    setTimeout(() => {
+                        const insight = document.getElementById('insight');
+                        insight.scrollIntoView({ behavior: 'smooth' });
+                    }, 500);
+                }}>Our insight</button>
+                
+                <button className="block" onClick={() => {
+                    props.setActivePage('about');
+                    setTimeout(() => {
+                        const aim = document.getElementById('aim');
+                        aim.scrollIntoView({ behavior: 'smooth' });
+                    }, 500);
+                }}>Our aim</button>
+
+                <button className="block" onClick={() => {
+                    props.setActivePage('about');
+                    setTimeout(() => {
+                        const team = document.getElementById('team');
+                        team.scrollIntoView({ behavior: 'smooth' });
+                    }, 500);
+                }}>Meet our team</button>
             </div>
             <div>
                 <p className='font-bold'>FAQ</p>
-                <a href="#1" className='block'>How to get the forecast of my state?</a>
-                <a href="#1" className='block'>Is these forecasts act as real-time ground-level current air quality?</a>
             </div>
         </div>
     );

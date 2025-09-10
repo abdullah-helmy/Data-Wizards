@@ -7,19 +7,25 @@ const Navbar = (props) => {
 
     useEffect(() => {
         if (props.isDark) {
-            navbar.current.classList.add('shadow-white');
-            navbar.current.classList.remove('shadow-black');
+            navbar.current.classList.add('border-gray-600');
+            navbar.current.classList.remove('border-slate-200');
         } else {
-            navbar.current.classList.remove('shadow-white');
-            navbar.current.classList.add('shadow-black');
+            navbar.current.classList.remove('border-gray-600');
+            navbar.current.classList.add('border-slate-200');
         }
     }, [props.isDark]);
 
     return (
-        <div className="shadow-md" ref={navbar}>
+        <div className="border-b-2" ref={navbar}>
             <ul className='flex flex-row py-5 px-2'>
                 <li className='pr-5'>
                     <button className='' onClick={() => props.setActivePage('home')}>Home</button>
+                </li>
+                <li className='pr-5'>
+                    <button className='' onClick={() => props.setActivePage('forecast')}>Forecast</button>
+                </li>
+                <li className='pr-5'>
+                    <button className='' onClick={() => props.setActivePage('docs')}>Documentation</button>
                 </li>
                 <li className='pr-5'>
                     <button className='' onClick={() => props.setActivePage('login')}>Login</button>
