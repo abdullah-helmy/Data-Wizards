@@ -7,3 +7,31 @@
   height: 100%;
   position: relative;
 }
+
+@layer components {
+  .tw-carousel-light .carousel-control-prev-icon,
+  .tw-carousel-light .carousel-control-next-icon {
+    filter: invert(1);
+  }
+
+  .tw-carousel-light .carousel-indicators [data-bs-target] {
+    @apply tw-bg-gray-800;
+  }
+
+  .tw-carousel-light .carousel-indicators .active {
+    @apply tw-bg-purple-600;
+  }
+
+  .tw-carousel-dark .carousel-control-prev-icon,
+  .tw-carousel-dark .carousel-control-next-icon {
+    filter: invert(0);
+  }
+
+  .tw-carousel-dark .carousel-indicators [data-bs-target] {
+    @apply tw-bg-gray-300;
+  }
+
+  .tw-carousel-dark .carousel-indicators .active {
+    @apply tw-bg-purple-400;
+  }
+}

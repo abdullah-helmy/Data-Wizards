@@ -1,116 +1,92 @@
-import { useEffect, useRef, useState } from "react";
-import Galaxy from "../Components/Galaxy";
+import { useEffect, useState } from "react";
 
 const Login = (props) => {
     const [signIn, setSignIn] = useState(false);
-
-    const button = useRef(null);
-    const form = useRef(null);
 
     useEffect(() => {
         const inputs = document.querySelectorAll('input');
 
         inputs.forEach(input => {
             if (props.isDark) {
-                input.classList.add('bg-black', 'border-white', 'shadow-white');
-                input.classList.remove('bg-white', 'border-black', 'shadow-black');
+                input.classList.add('tw-bg-black', 'tw-border-white', 'tw-shadow-white');
+                input.classList.remove('tw-bg-white', 'tw-border-black', 'tw-shadow-black');
             } else {
-                input.classList.remove('bg-black', 'border-white', 'shadow-white');
-                input.classList.add('bg-white', 'border-black', 'shadow-black');
+                input.classList.remove('tw-bg-black', 'tw-border-white', 'tw-shadow-white');
+                input.classList.add('tw-bg-white', 'tw-border-black', 'tw-shadow-black');
             }
         });
-
-        if (props.isDark) {
-            form.current.classList.add('border-white');
-            form.current.classList.remove('border-black');
-        } else {
-            form.current.classList.remove('border-white');
-            form.current.classList.add('border-black');
-        }
     }, [props.isDark]);
 
     const changeSignIn = () => setSignIn(prev => !prev);
 
     return (
-        <div className="min-h-screen flex flex-col justify-center align-center m-auto w-[800px] h-[750px]">
+        <div className="tw-min-h-screen tw-flex tw-flex-col tw-justify-center tw-align-center tw-m-auto tw-w-[800px] tw-h-[750px] max-md:tw-w-[600px] max-sm:tw-w-[400px]">
             {signIn ? (
                 <div>
-                    <Galaxy mouseInteraction={false} mouseRepulsion={false}>
-                        <form
-                            ref={form}
-                            className="flex flex-col shadow-lg justify-center content-center border-2 rounded-lg p-5"
+                    <form className={`tw-flex tw-flex-col tw-shadow-lg tw-justify-center tw-content-center tw-border-2 tw-rounded-lg tw-p-5 ${props.isDark ? 'tw-border-gray-600 tw-bg-slate-800' : 'tw-border-slate-200 tw-bg-slate-100'}`}>
+                        <label>Username</label>
+                        <input
+                            type="text"
+                            className={`tw-h-8 tw-border-2 tw-border-solid tw-border-black tw-rounded-md ${props.isDark ? 'tw-bg-black tw-border-white tw-shadow-white' : 'tw-bg-white tw-border-black tw-shadow-black'}`}
+                        />
+                        <label>Password</label>
+                        <input
+                            type="password"
+                            className={`tw-h-8 tw-border-2 tw-border-solid tw-border-black tw-rounded-md ${props.isDark ? 'tw-bg-black tw-border-white tw-shadow-white' : 'tw-bg-white tw-border-black tw-shadow-black'}`}
+                        />
+
+                        <button
+                            type="submit"
+                            className='tw-h-10 tw-w-[300px] tw-m-auto tw-my-5 tw-border-2 tw-bg-purple-500 tw-border-none tw-rounded-full'
                         >
-                            <label>Username</label>
-                            <input
-                                type="text"
-                                className={`h-8 border border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'}`}
-                            />
-                            <label>Password</label>
-                            <input
-                                type="password"
-                                className={`h-8  border-2 border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'}`}
-                            />
+                            Sign in
+                        </button>
 
-                            <button
-                                ref={button}
-                                type="submit"
-                                className='h-10 w-[300px] m-auto my-5 border-2 bg-purple-500 border-none rounded-full'
-                            >
-                                Sign in
-                            </button>
-
-                            <p>
-                                If you have an account, <button className="text-blue-400" onClick={changeSignIn}>Login in your account</button>
-                            </p>
-                        </form>
-                    </Galaxy>
+                        <p>
+                            If you don't have an account, <button className="tw-text-blue-400" onClick={changeSignIn}>Register</button>
+                        </p>
+                    </form>
                 </div>
             ) : (
                 <div>
-                    <Galaxy mouseInteraction={false} mouseRepulsion={false}>
-                        <form
-                            ref={form}
-                            className="flex flex-col shadow-lg justify-center content-center border-2 rounded-lg p-5"
+                    <form className={`tw-flex tw-flex-col tw-shadow-lg tw-justify-center tw-content-center tw-border-2 tw-rounded-lg tw-p-5 ${props.isDark ? 'tw-border-gray-600 tw-bg-slate-800' : 'tw-border-slate-200 tw-bg-slate-100'}`}>
+                        <label>Username</label>
+                        <input
+                            type="text"
+                            className={`tw-h-8 tw-border-2 tw-border-solid tw-border-black tw-rounded-md ${props.isDark ? 'tw-bg-black tw-border-white tw-shadow-white' : 'tw-bg-white tw-border-black tw-shadow-black'}`}
+                        />
+                        <label>Email</label>
+                        <input
+                            type="email"
+                            className={`tw-h-8 tw-border-2 tw-border-solid tw-border-black tw-rounded-md ${props.isDark ? 'tw-bg-black tw-border-white tw-shadow-white' : 'tw-bg-white tw-border-black tw-shadow-black'}`}
+                        />
+                        <label>Phone Number</label>
+                        <input
+                            type="tel"
+                            className={`tw-h-8 tw-border-2 tw-border-solid tw-border-black tw-rounded-md ${props.isDark ? 'tw-bg-black tw-border-white tw-shadow-white' : 'tw-bg-white tw-border-black tw-shadow-black'}`}
+                        />
+                        <label>Password</label>
+                        <input
+                            type="password"
+                            className={`tw-h-8 tw-border-2 tw-border-solid tw-border-black tw-rounded-md ${props.isDark ? 'tw-bg-black tw-border-white tw-shadow-white' : 'tw-bg-white tw-border-black tw-shadow-black'}`}
+                        />
+                        <label>Confirm Password</label>
+                        <input
+                            type="password"
+                            className={`tw-h-8 tw-border-2 tw-border-solid tw-border-black tw-rounded-md ${props.isDark ? 'tw-bg-black tw-border-white tw-shadow-white' : 'tw-bg-white tw-border-black tw-shadow-black'}`}
+                        />
+
+                        <button
+                            type="submit"
+                            className='tw-h-10 tw-w-[300px] tw-m-auto tw-my-5 tw-border-2 tw-bg-purple-500 tw-border-none tw-rounded-full'
                         >
-                            <label>Username</label>
-                            <input
-                                type="text"
-                                className={`h-8 border-2 border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'}`}
-                            />
-                            <label>Email</label>
-                            <input
-                                type="email"
-                                className={`h-8 border-2 border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'}`}
-                            />
-                            <label>Phone Number</label>
-                            <input
-                                type="tel"
-                                className={`h-8 border-2 border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'}`}
-                            />
-                            <label>Password</label>
-                            <input
-                                type="password"
-                                className={`h-8 border-2 border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'}`}
-                            />
-                            <label>Confirm Password</label>
-                            <input
-                                type="password"
-                                className={`h-8 border-2 border-solid border-black rounded-md ${props.isDark ? 'bg-black border-white shadow-white' : 'bg-white border-black shadow-black'}`}
-                            />
+                            Sign up
+                        </button>
 
-                            <button
-                                ref={button}
-                                type="submit"
-                                className='h-10 w-[300px] m-auto my-5 border-2 bg-purple-500 border-none rounded-full'
-                            >
-                                Sign up
-                            </button>
-
-                            <p>
-                                If you have already an account, <button className="text-blue-400" onClick={changeSignIn}>Sign in</button>
-                            </p>
-                        </form>
-                    </Galaxy>
+                        <p>
+                            If you have already an account, <button className="tw-text-blue-400" onClick={changeSignIn}>Sign in</button>
+                        </p>
+                    </form>
                 </div>
             )}
         </div>

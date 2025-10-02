@@ -20,6 +20,7 @@ export default function Satellite({ className = '', style = {}, isDark = false }
 
     const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000);
     camera.position.set(0, 0, 5);
+    camera.lookAt(0, 0, 0);
     cameraRef.current = camera;
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -64,11 +65,17 @@ export default function Satellite({ className = '', style = {}, isDark = false }
     );
 
     const resize = () => {
-      const width = 1000;
-      const height = 1000;
-      renderer.setSize(width, height, false);
-      camera.aspect = width / height;
-      camera.updateProjectionMatrix();
+      requestAnimationFrame(() => {
+        const container = containerRef.current;
+        if (!container || !renderer || !camera) return;
+
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+
+        renderer.setSize(width, height, true);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+      });
     };
     resize();
 
