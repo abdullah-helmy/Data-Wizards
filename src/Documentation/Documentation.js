@@ -164,10 +164,6 @@ const Documentation = (props) => {
                             applications.
                         </motion.div>
                     </div>
-
-                    <div className={`tw-mb-10 tw-mx-auto tw-p-5 tw-max-w-screen-xl tw-w-full tw-rounded-b-lg`}>
-                        <p>djuihfwjiofwofjwe</p>
-                    </div>
                 </div>
             </div>
         </>
